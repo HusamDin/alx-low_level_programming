@@ -1,0 +1,11 @@
+#include <stdio.h>
+/**
+* main - Print the string in the print f funtion
+*
+* Return: Always 0 (Sucessful)
+*/
+int main(void)
+{
+printf("with proper grammar, but the outcome is a piece of art,\n");
+return (0);
+}
