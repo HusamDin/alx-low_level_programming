@@ -4,6 +4,8 @@
 /**
 * main - Prints a positive or negative number
 *
+* Description: Using the main function
+* this program prints whether the integer n is positive, is negative, or is zero
 * Return: 0
 */
 int main(void)
