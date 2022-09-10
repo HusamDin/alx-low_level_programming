@@ -11,8 +11,11 @@ int main(void)
 	for (ln = 48; ln <= 57; ln++)
 	{
 		putchar(ln);
-		putchar(',');
-		putchar(' ');
+		if (ln <= 56)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 	return (0);
