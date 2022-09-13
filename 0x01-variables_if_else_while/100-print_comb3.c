@@ -17,11 +17,14 @@ int main(void)
 				putchar(ln);
 				putchar(hn);
 				if (ln == 56  && hn == 57)
+				{
+					putchar(' ');
 					ln++;
+				}
 				else
 				{
 					putchar(',');
-				       	putchar(' ');
+					putchar(' ');
 				}
 			}
 		}
