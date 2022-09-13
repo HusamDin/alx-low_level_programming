@@ -10,14 +10,19 @@ int main(void)
 
 	for (ln = 48; ln <= 57; ln++)
 	{
-		for(hn = 49; hn <= 57; hn++)
+		for (hn = 49; hn <= 57; hn++)
 		{
 			if (hn > ln)
 			{
 				putchar(ln);
 				putchar(hn);
-				putchar(',');
-				putchar(' ');
+				if (ln == 56  && hn == 57)
+					ln++;
+				else
+				{
+					putchar(',');
+				       	putchar(' ');
+				}
 			}
 		}
 	}
