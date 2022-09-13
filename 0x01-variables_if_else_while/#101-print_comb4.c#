@@ -14,14 +14,13 @@ int main(void)
 		{
 			if (mn > ln)
 			{
-			for (hn = 50; hn <= 57; hn++)
-			{
-				if (hn > mn)
+				for (hn = 50; hn <= 57; hn++)
 				{
-					putchar(ln);
-					putchar(mn);
-					putchar(hn);
-					if (ln == 55 && mn == 56 && hn == 57)
+					if (hn > mn)
+					{
+						putchar(ln);
+						putchar(mn);
+						putchar(h						if (ln == 55 && mn == 56 && hn== 57)
 					{
 						putchar(' ');
 						hn++;
