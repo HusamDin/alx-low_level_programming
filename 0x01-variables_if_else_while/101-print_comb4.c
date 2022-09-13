@@ -23,7 +23,7 @@ int main(void)
 					putchar(hn);
 					if (ln == 55 && mn == 56 && hn == 57)
 					{
-						putchar(' ');
+						putchar('\n');
 						hn++;
 					}
 					else
