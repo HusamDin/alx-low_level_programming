@@ -8,25 +8,25 @@
 int _islower(int c)
 {
 	int capA = 'A';
-        int ret = 0;
+	int ret = 0;
 
 	while (capA <= 'Z')
 	{
 		if (capA == c)
 		{
 			ret = 0;
-			return ret;
+			return (ret);
 		}
 		else
 		{
 			if (capA == 'Z')
 			{
 				ret = 1;
-				return ret;
+				return (ret);
 			}
 			else
 				capA++;
 		}
 	}
-	return ret;
+	return (ret);
 }
