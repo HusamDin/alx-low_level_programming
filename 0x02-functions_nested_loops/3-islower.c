@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * _islower - Checks for lowercase characters
  * @c: the character to be checked
@@ -9,18 +7,26 @@
 
 int _islower(int c)
 {
-	int capA = 65;
+	int capA = 'A';
+        int ret = 0;
 
-	while (capA <= 90)
+	while (capA <= 'Z')
 	{
 		if (capA == c)
-	      		return 0;
+		{
+			ret = 0;
+			return ret;
+		}
 		else
 		{
-			if (capA == 90)
-				return 1;
+			if (capA == 'Z')
+			{
+				ret = 1;
+				return ret;
+			}
 			else
 				capA++;
 		}
 	}
+	return ret;
 }
