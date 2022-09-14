@@ -10,7 +10,7 @@ int _islower(int c)
 	int capA = 'A';
 	int ret = 0;
 
-	if (c >= 65 && c <= 90)
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 	{
 		while (capA <= 'Z')
 		{
