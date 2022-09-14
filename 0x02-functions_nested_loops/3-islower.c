@@ -10,23 +10,31 @@ int _islower(int c)
 	int capA = 'A';
 	int ret = 0;
 
-	while (capA <= 'Z')
+	if (capA >=65 && capA <=90)
 	{
-		if (capA == c)
+		while (capA <= 'Z')
 		{
-			ret = 0;
-			return (ret);
-		}
-		else
-		{
-			if (capA == 'Z')
+			if (capA == c)
 			{
-				ret = 1;
+				ret = 0;
 				return (ret);
 			}
 			else
-				capA++;
+			{
+				if (capA == 'Z')
+				{
+					ret = 1;
+					return (ret);
+				}
+				else
+					capA++;
+			}
 		}
+	}
+	else
+	{
+		ret = 0;
+		return (ret);
 	}
 	return (ret);
 }
