@@ -23,8 +23,10 @@ int main(void)
     _putchar(48 + r);
     _putchar('\n');
     if (n > 0 || n == 0)
-	    printf("%d\n", n);
+	    printf("%d\n", n*-1);
     else
 	    printf("Hello, World\n");
+    printf("%d\n", n*-1);
+    printf("%d\n", n);
     return (0);
 }
