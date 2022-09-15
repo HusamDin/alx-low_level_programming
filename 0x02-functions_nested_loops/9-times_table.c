@@ -16,15 +16,15 @@ void times_table(void)
 		{
 			prod = fn * ln;
 			if (ln == 9)
-     				printf("%d", prod);
-		       	else if (prod > 9)
-	       			printf("%d, ", prod);
+				printf("%d", prod);
+			else if (prod > 9)
+				printf("%d, ", prod);
 			else if (fn >= 2 && prod >= 8)
-	       			printf("%d, ", prod);
+				printf("%d, ", prod);
 			else if (fn >= 5 && prod >= 5)
 				printf("%d, ", prod);
 			else
-		       		printf("%d,  ", prod);
+				printf("%d,  ", prod);
 		}
 		putchar('\n');
 	}
