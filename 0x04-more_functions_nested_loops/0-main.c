@@ -8,6 +8,8 @@
  */
 int main(void)
 {
+	int j = 0;
+int i = 0;
     char c;
 
     c = 'A';
