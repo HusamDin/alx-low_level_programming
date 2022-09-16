@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+/**
+* main - causes an infinite loop
+* Return: 0
+*/
+
+int main(void)
+{
+	int i;
+
+	printf("Infinite loop incoming :(\n");
+
+	i = 0;
+/*
+ *        while (i < 10)
+ *	{
+ *		putchar(i);
+ *	}
+ */
+	printf("Infinite loop avoided! \\o/\n");
+
+	return (0);
+}
+1-main.c:10: ERROR: code indent should use tabs where possible
+1-main.c:10: WARNING: please, no spaces at the start of a line
+1-main.c:12: ERROR: code indent should use tabs where possible
+1-main.c:12: WARNING: please, no spaces at the start of a line
+1-main.c:14: ERROR: code indent should use tabs where possible
+1-main.c:14: WARNING: please, no spaces at the start of a line
+1-main.c:16: WARNING: Block comments use a leading /* on a separate line
+1-main.c:17: ERROR: code indent should use tabs where possible
+1-main.c:17: WARNING: Block comments use * on subsequent lines
+1-main.c:18: ERROR: code indent should use tabs where possible
+1-main.c:19: ERROR: code indent should use tabs where possible
+1-main.c:19: WARNING: Block comments use a trailing */ on a separate line
+1-main.c:21: ERROR: code indent should use tabs where possible
+1-main.c:21: WARNING: please, no spaces at the start of a line
+1-main.c:23: ERROR: code indent should use tabs where possible
+1-main.c:23: WARNING: please, no spaces at the start of a line
+total: 8 errors, 8 warnings, 24 lines checked
