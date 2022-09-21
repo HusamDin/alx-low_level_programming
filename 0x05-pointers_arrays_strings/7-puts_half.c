@@ -11,8 +11,8 @@
 void puts_half(char *s)
 {
 	int i = strlen(s);
-	int k = (i) / 2;
-	int j  = k;
+	int k = (i - 1) / 2;
+	int j  = k + 1;
 
 	while (s[k])
 	{
