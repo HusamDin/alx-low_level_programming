@@ -14,8 +14,8 @@ void print_array(int *a, int n)
 
 	while (i < n)
 	{
-		if (i == n-1)
-			printf("%i ", a[i]);
+		if (i == n - 1)
+			printf("%i", a[i]);
 		else
 			printf("%i, ", a[i]);
 		i++;
