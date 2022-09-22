@@ -1,0 +1,26 @@
+/**
+ * _strcmp - Compares two strings
+ * @s1: The first compared string
+  *@s2: The second compared string
+ *
+ * Return: 0 if identical
+ * Or the difference in Ascii if not identical
+ */
+
+int _strcmp(char *s1, char *s2)
+{
+	int i = 0;
+	while (*s1 != '\0' && *s2 != '\0')
+	{
+		if (s1[i] == s2[i])
+		{
+			i++;
+			if (*s1 == '\0' || *s2 == '\0')
+				return (0);
+		}
+		else
+			return (s1[i] - s2[i]);
+	}
+	return 0;
+
+}
