@@ -1,3 +1,4 @@
+#include <stddef.h>
 /**
  * _strchr - locates a character in a string
  * @s: The string to search in
@@ -19,8 +20,7 @@ char *_strchr(char *s, char c)
 	}
 
 	if (*s == '\0')
-		return (0);
-	else
-		return (s + i - 1);
+		return NULL;
+       	return (s + i - 1);
 
 }
