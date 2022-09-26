@@ -2,7 +2,7 @@
  * _memcpy - copies n bytes from memory area src to memory area dest
  * @dest: Modified memory area
  * @src:  Copied memory address
- * n: number of bytes to be copied from src to dest
+ * @n: number of bytes to be copied from src to dest
  *
  * Return: dest
  */
