@@ -11,9 +11,9 @@ int checkArg(char *c)
 {
 	int i;
 
-	for (i = 0; *c != '\0'; i++)
+	for (i = 0; c[i] != '\0'; i++)
 	{
-		if (!(c[i] >= '0' && c[i] >= 9))
+		if (!(c[i] >= '0' && c[i] <= '9'))
 		{
 			return (0);
 		}
