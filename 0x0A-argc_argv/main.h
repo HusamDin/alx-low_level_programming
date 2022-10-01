@@ -1,6 +1,6 @@
 #ifndef HOLBERTON
 #define HOLBERTON
 
-int _putchar(char);
+int _putchar(char c);
 
 #endif
