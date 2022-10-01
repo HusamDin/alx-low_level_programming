@@ -10,7 +10,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int count, mul;
+	int count;
+       	int mul = 1;
 
 	if (argc == 3)
 	{
@@ -19,11 +20,11 @@ int main(int argc, char *argv[])
 			mul *= atoi(argv[count]);
 		}
 		printf("%d\n", mul);
+		return (0);
        	}
 	else
 	{
 		printf("Error\n");
 		return (1);
 	}
-	return (0);
 }
