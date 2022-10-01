@@ -3,7 +3,7 @@
 /**
  * main - adds positive numbers
  * @argc: The number of arguments passed to main
- * argv: The strings passed to main
+ * @argv: The strings passed to main
  *
  * Return: 0
  */
