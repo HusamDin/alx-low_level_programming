@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	{
 		for (count = 1; count < argc; count++)
 		{
-			if (atoi(argv[count]) > 0)
+			if (atoi(argv[count]) > 0 && atoi(argv[count]) < 10)
 			{
 				sum += atoi(argv[count]);
 			}
@@ -33,5 +33,4 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (1);
 	}
-
 }
