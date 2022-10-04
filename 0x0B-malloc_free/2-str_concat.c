@@ -20,12 +20,14 @@ char *str_concat(char *s1, char *s2)
 	s1Len = strlen(s1);
 	s2Len = strlen(s2);
 	s1s2Conc = malloc(sizeof(char) * (s1Len + s2Len) + 1);
+	if (s1s2Conc == NULL)
+		return (NULL);
 	for (j = 0; *(s1 + j) != '\0'; j++)
 	{
 		s1s2Conc[j] = s1[j];
 	}
-	if (s1s2Conc == NULL)
-		return (NULL);
+
+
 	for (i = 0; i < s2Len; i++)
 	{
 		s1s2Conc[s1Len] = s2[i];
