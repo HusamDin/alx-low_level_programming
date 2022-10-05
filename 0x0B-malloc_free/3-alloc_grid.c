@@ -28,6 +28,8 @@ int **alloc_grid(int width, int height)
 		{
 			free(ptr[i]);
 			ptr[i] = NULL;
+			free(ptr);
+			ptr = NULL;
 			return (NULL);
 		}
 	}
