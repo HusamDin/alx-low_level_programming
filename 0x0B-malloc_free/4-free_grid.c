@@ -2,7 +2,7 @@
 /**
  * free_grid - frees a 2 dimensional grid
  * @grid: The 2 dim array to free
- * @heiht: The height of the array
+ * @height: The height of the array
  *
  * Return: void
  */
