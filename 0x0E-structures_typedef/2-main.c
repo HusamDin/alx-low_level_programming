@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 #include "dog.h"
 
 
@@ -23,9 +22,6 @@ int main(void)
 
 
 
-    my_dog.age = 3.5;
-
-    my_dog.owner = "Bob";
 
     print_dog(&my_dog);
 
