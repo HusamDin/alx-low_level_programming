@@ -17,9 +17,11 @@ int main(void)
 
 {
 
-    struct dog my_dog;
+    dog_t my_dog;
 
-
+    my_dog.name = "Wuppy";
+    my_dog.age = 30;
+    my_dog.owner = "Hoss";
 
 
 
