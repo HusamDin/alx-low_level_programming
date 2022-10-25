@@ -1,3 +1,4 @@
+#include <stddef.h>
 #ifndef _HOL_H_
 #define _HOL_H_
 
