@@ -26,9 +26,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 
 	tmp = nthNode->next;
-	nthNode->next = newNode;
 	newNode->n = n;
 	newNode->next = tmp;
+	nthNode->next = newNode;
 
 	return (newNode);
 }
