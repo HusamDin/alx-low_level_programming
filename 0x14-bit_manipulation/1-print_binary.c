@@ -9,222 +9,212 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int cmp = 0, i = 0, len;
-	char b[80];
+	unsigned int cmp = 0;
 
 	if (n <= 2047 && n > 1023)
 	{
-		b[i] = '1';
-		i++;
+		_putchar('1');
 		cmp += 1024;
 		if ((cmp + 512) <= n)
 		{
 			cmp += 512;
-			b[i] = '1';
-			i++;
+			_putchar('1');
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
 		}
 		if (cmp + 256 <= n)
 		{
 			cmp += 256;
-			b[i] = '1';
-			i++;
+			_putchar('1');
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
 		}
 		if (cmp + 128 <= n)
 		{
 			cmp += 128;
-			b[i] = '1';
-			i++;
+			_putchar('1');
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
 		}
 		if (cmp + 64 <= n)
 		{
 			cmp += 64;
-			b[i] = '1';
-			i++;
+			_putchar('1');
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
 		}
 		if (cmp + 32 <= n)
 		{
 			cmp += 32;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 16 <= n)
 		{
 			cmp += 16;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 8 <= n)
 		{
 			cmp += 8;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 4 <= n)
 		{
 			cmp += 4;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 2 <= n)
 		{
 			cmp += 2;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 1 <= n)
 		{
-			b[i] = '1';
+			_putchar('1');
 		}
 		else
 		{
-			b[i] = '0';
+			_putchar('0');
 		}
 	}
 	else if (n <= 1023 && n > 511)
 	{
-		b[i] = '1';
-		i++;
+		_putchar('1');
+		 
 		cmp += 512;
 		if ((cmp + 256) <= n)
 		{
 			cmp += 256;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 128 <= n)
 		{
 			cmp += 128;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 64 <= n)
 		{
 			cmp += 64;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 32 <= n)
 		{
 			cmp += 32;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 16 <= n)
 		{
 			cmp += 16;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 8 <= n)
 		{
 			cmp += 8;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 4 <= n)
 		{
 			cmp += 4;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 2 <= n)
 		{
 			cmp += 2;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 1 <= n)
 		{
-			b[i] = '1';
+			_putchar('1');
 		}
 		else
 		{
-			b[i] = '0';
+			_putchar('0');
 		}
 	}
 
@@ -233,87 +223,87 @@ void print_binary(unsigned long int n)
 		if (cmp + 128 <= n)
 		{
 			cmp += 128;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 64 <= n)
 		{
 			cmp += 64;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 32 <= n)
 		{
 			cmp += 32;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 16 <= n)
 		{
 			cmp += 16;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 8 <= n)
 		{
 			cmp += 8;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 4 <= n)
 		{
 			cmp += 4;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 2 <= n)
 		{
 			cmp += 2;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 1 <= n)
 		{
-			b[i] = '1';
+			_putchar('1');
 		}
 		else
 		{
-			b[i] = '0';
+			_putchar('0');
 		}
 	}
 	else if (n <= 127 && n > 63)
@@ -321,76 +311,76 @@ void print_binary(unsigned long int n)
 		if (cmp + 64 <= n)
 		{
 			cmp += 64;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 32 <= n)
 		{
 			cmp += 32;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 16 <= n)
 		{
 			cmp += 16;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 8 <= n)
 		{
 			cmp += 8;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 4 <= n)
 		{
 			cmp += 4;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 2 <= n)
 		{
 			cmp += 2;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 1 <= n)
 		{
-			b[i] = '1';
+			_putchar('1');
 		}
 		else
 		{
-			b[i] = '0';
+			_putchar('0');
 		}
 	}
 	else if (n <= 63 && n > 31)
@@ -399,65 +389,65 @@ void print_binary(unsigned long int n)
 		if (cmp + 32 <= n)
 		{
 			cmp += 32;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 16 <= n)
 		{
 			cmp += 16;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 8 <= n)
 		{
 			cmp += 8;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 4 <= n)
 		{
 			cmp += 4;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 2 <= n)
 		{
 			cmp += 2;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 1 <= n)
 		{
-			b[i] = '1';
+			_putchar('1');
 		}
 		else
 		{
-			b[i] = '0';
+			_putchar('0');
 		}
 	}
 
@@ -466,54 +456,54 @@ void print_binary(unsigned long int n)
 		if (cmp + 16 <= n)
 		{
 			cmp += 16;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 8 <= n)
 		{
 			cmp += 8;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 4 <= n)
 		{
 			cmp += 4;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 2 <= n)
 		{
 			cmp += 2;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 1 <= n)
 		{
-			b[i] = '1';
+			_putchar('1');
 		}
 		else
 		{
-			b[i] = '0';
+			_putchar('0');
 		}
 	}
 	else if (n <= 15 && n > 7)
@@ -521,43 +511,43 @@ void print_binary(unsigned long int n)
 		if (cmp + 8 <= n)
 		{
 			cmp += 8;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 4 <= n)
 		{
 			cmp += 4;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 2 <= n)
 		{
 			cmp += 2;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 1 <= n)
 		{
-			b[i] = '1';
+			_putchar('1');
 		}
 		else
 		{
-			b[i] = '0';
+			_putchar('0');
 		}
 	}
 	else if (n <= 7 && n > 3)
@@ -565,59 +555,52 @@ void print_binary(unsigned long int n)
 		if (cmp + 4 <= n)
 		{
 			cmp += 4;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 2 <= n)
 		{
 			cmp += 2;
-			b[i] = '1';
-			i++;
+			_putchar('1');
+			 
 		}
 		else
 		{
-			b[i] = '0';
-			i++;
+			_putchar('0');
+			 
 		}
 		if (cmp + 1 <= n)
 		{
-			b[i] = '1';
+			_putchar('1');
 		}
 		else
 		{
-			b[i] = '0';
+			_putchar('0');
 		}
 	}
 	else if (n <= 3 && n > 1)
 	{
-		b[i] = '1';
-		i++;
+		_putchar('1');
 		cmp += 2;
 		if (cmp + 1 <= n)
 		{
-			b[i] = '1';
+			_putchar('1');
 		}
 		else
 		{
-			b[i] = '0';
+			_putchar('0');
 		}
 	}
-	else
+	else if (n == 1)
 	{
-		b[i] = '0';
-	}
-	len = strlen(b);
-
-	if (n > 1 || n == 0)
-	{
-		for (i = 0; i < len; i++)
-			_putchar(b[i]);
-	}
-	else
 		_putchar('1');
+	}
+
+	else
+		_putchar('0');
 }
