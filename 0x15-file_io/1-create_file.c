@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <fcntl.h>
+#include <string.h>
 
 /**
  * create_file - creates a file
@@ -22,11 +23,12 @@ int create_file(char *filename, char *text_content)
 	if (fd == -1)
 		return (fd);
 
-	if (text_content == NULL)
-		text_content = "";
+	contentLen = strlen(text_content);
 
-	for (contentLen = 0; text_content[contentLen]; contentLen++)
-		;
+	if (text_content == NULL)
+		wrLen = write(fd, "", 1);
+	else
+		wrLen = write(fd, text_content, contentLen);
 
 	wrLen = write(fd, text_content, contentLen);
 
