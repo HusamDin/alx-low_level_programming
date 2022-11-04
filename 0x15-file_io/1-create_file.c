@@ -27,7 +27,7 @@ int create_file(char *filename, char *text_content)
 	if (text_content == NULL)
 		wrLen = write(fd, "", contentLen);
 	else
-	wrLen = write(fd, text_content, contentLen);
+		wrLen = write(fd, text_content, contentLen);
 
 	close(fd);
 
