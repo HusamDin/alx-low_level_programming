@@ -1,6 +1,5 @@
 #include <unistd.h>
 #include <fcntl.h>
-#include <string.h>
 
 /**
  * create_file - creates a file
@@ -10,6 +9,7 @@
  * Return: On success, 1.
  * On failure, -1 is returned.
  */
+
 int create_file(char *filename, char *text_content)
 {
 	int fd, wrLen, contentLen;
@@ -29,10 +29,10 @@ int create_file(char *filename, char *text_content)
 	else
 		wrLen = write(fd, text_content, contentLen);
 
-	close(fd);
-
 	if (wrLen == -1)
 		return (wrLen);
+
+	close(fd);
 
 	return (1);
 }
