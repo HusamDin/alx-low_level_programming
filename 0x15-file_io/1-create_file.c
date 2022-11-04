@@ -30,8 +30,6 @@ int create_file(char *filename, char *text_content)
 	else
 		wrLen = write(fd, text_content, contentLen);
 
-	wrLen = write(fd, text_content, contentLen);
-
 	if (wrLen == -1)
 		return (wrLen);
 
