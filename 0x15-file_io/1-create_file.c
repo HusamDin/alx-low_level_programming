@@ -22,7 +22,7 @@ int create_file(char *filename, char *text_content)
 	if (fd == -1)
 		return (fd);
 
-	for (contentLen = 0; text_Content[contentLen]; contentLen++);
+	for (contentLen = 0; text_content[contentLen]; contentLen++);
 
 	if (text_content == NULL)
 		wrLen = write(fd, "", contentLen);
