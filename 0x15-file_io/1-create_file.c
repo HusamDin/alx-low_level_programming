@@ -20,9 +20,9 @@ int create_file(char *filename, char *text_content)
 	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
 	if (fd == -1)
-		return (-1);
+		return (fd);
 
-	contentLen = strlen(text_content);
+	for (contentLen = 0; text_Content[contentLen]; contentLen++);
 
 	if (text_content == NULL)
 		wrLen = write(fd, "", contentLen);
@@ -32,7 +32,7 @@ int create_file(char *filename, char *text_content)
 	close(fd);
 
 	if (wrLen == -1)
-		return (-1);
+		return (wrLen);
 
 	return (1);
 }
