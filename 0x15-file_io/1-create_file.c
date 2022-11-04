@@ -23,12 +23,12 @@ int create_file(char *filename, char *text_content)
 	if (fd == -1)
 		return (fd);
 
+	if (text_content == NULL)
+		text_content = "";
+
 	contentLen = strlen(text_content);
 
-	if (text_content == NULL)
-		wrLen = write(fd, "", 0);
-	else
-		wrLen = write(fd, text_content, contentLen);
+	wrLen = write(fd, text_content, contentLen);
 
 	if (wrLen == -1)
 		return (wrLen);
