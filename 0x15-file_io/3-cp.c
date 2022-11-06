@@ -84,7 +84,7 @@ void display(int fd, char mode, char *filename)
 {
 	if (mode == 'R')
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
 		exit(98);
 	}
 	else if (mode == 'W')
