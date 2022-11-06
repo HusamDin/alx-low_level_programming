@@ -36,7 +36,7 @@ int main(int ac, char **av)
 		display(src, 'R');
 	}
 
-	dest = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	dest = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	if (dest == -1)
 	{
