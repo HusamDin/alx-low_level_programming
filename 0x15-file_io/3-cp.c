@@ -29,7 +29,7 @@ int main(int ac, char **av)
 		exit(97);
 	}
 
-	src = open(av[1], O_RDONLY, 0600);
+	src = open(av[1], O_RDONLY, 0664);
 
 	if (src == -1)
 	{
