@@ -94,7 +94,7 @@ void display(int fd, char mode)
 	}
 	else
 	{
-		dprintf(fd, "Error: Can't close fd %i\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd);
 		exit(100);
 	}
 }
