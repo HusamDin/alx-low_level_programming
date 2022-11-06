@@ -20,8 +20,8 @@ void display(int, char);
 
 int main(int ac, char **av)
 {
-	int fd, chrd, chwr, bufLen;
-	char *buf;
+	int src, dest, chwr, bufLen = 1024;
+	char buf[1024];
 
 	if (ac != 3)
 	{
@@ -29,45 +29,43 @@ int main(int ac, char **av)
 		exit(97);
 	}
 
-	fd = open(av[1], O_RDONLY, 0600);
+	src = open(av[1], O_RDONLY, 0600);
 
-	if (fd == -1)
+	if (src == -1)
 	{
-		display(fd, 'R');
+		display(src, 'R');
 	}
 
-	buf = malloc(sizeof(char) * 1024);
+	dest = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
-	chrd = read(fd, buf, 1024);
-
-	if (!buf || chrd == -1)
+	if (dest == -1)
 	{
-		free(buf);
-		display(fd, 'R');
+		display(dest, 'W');
 	}
 
-	for (bufLen = 0; buf[bufLen]; bufLen++)
-		;
-
-	fd = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0600);
-
-	if (fd == -1)
+	while (bufLen == 1024)
 	{
-		display(fd, 'W');
+		bufLen = read(src, buf, sizeof(buf));
+
+		if (bufLen == -1)
+		{
+			display(src, 'R');
+		}
+
+		chwr = write(dest, buf, bufLen);
+
+		if (chwr == -1)
+		{
+			display(dest, 'W');
+		}
 	}
 
-	chwr = write(fd, buf, bufLen);
+	src = close(src);
+	dest = close(dest);
 
-	if (chwr == -1)
+	if (src || dest)
 	{
-		display(fd, 'W');
-	}
-
-	fd = close(fd);
-
-	if (fd)
-	{
-		display(fd, 'C');
+		display(src, 'C');
 	}
 
 	return (0);
