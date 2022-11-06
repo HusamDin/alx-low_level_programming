@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void display_error_msg(int, char);
+void display(int, char);
 
 /**
  * main - copies the content of a file to another file
