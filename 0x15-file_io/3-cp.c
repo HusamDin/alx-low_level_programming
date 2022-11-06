@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+void display_error_msg(int, char);
+
 /**
  * main - copies the content of a file to another file
  * @ac: The number of command line arguments
@@ -31,9 +33,7 @@ int main(int ac, char **av)
 
 	if (fd == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n",
-			fd);
-		exit(98);
+		display(fd, 'R');
 	}
 
 	buf = malloc(sizeof(char) * 1024);
@@ -42,10 +42,8 @@ int main(int ac, char **av)
 
 	if (!buf || chrd == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n",
-			fd);
 		free(buf);
-		exit(98);
+		display(fd, 'R');
 	}
 
 	for (bufLen = 0; buf[bufLen]; bufLen++)
@@ -55,25 +53,48 @@ int main(int ac, char **av)
 
 	if (fd == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %d\n", fd);
-		exit(99);
+		display(fd, 'W');
 	}
 
 	chwr = write(fd, buf, bufLen);
 
 	if (chwr == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %d\n", fd);
-		exit(99);
+		display(fd, 'W');
 	}
 
 	fd = close(fd);
 
 	if (fd)
 	{
-		dprintf(fd, "Error: Can't close fd %i\n", fd);
-		exit(100);
+		display(fd, 'C');
 	}
 
 	return (0);
+}
+
+/**
+ * display - displays an error message depending on file mode
+ * @fd: The file descriptor
+ * @mode: The file mode denoted by its inital
+ * Return: void
+ */
+
+void display(int fd, char mode)
+{
+	if (mode == 'R')
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", fd);
+		exit(98);
+	}
+	else if (mode == 'W')
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %d\n", fd);
+		exit(99);
+	}
+	else
+	{
+		dprintf(fd, "Error: Can't close fd %i\n", fd);
+		exit(100);
+	}
 }
