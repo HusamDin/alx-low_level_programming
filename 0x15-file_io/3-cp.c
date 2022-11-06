@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void display(int, char);
+void display(int, char, char *);
 
 /**
  * main - copies the content of a file to another file
@@ -33,14 +33,14 @@ int main(int ac, char **av)
 
 	if (src == -1)
 	{
-		display(src, 'R');
+		display(src, 'R', av[1]);
 	}
 
 	dest = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	if (dest == -1)
 	{
-		display(dest, 'W');
+		display(dest, 'W', av[2]);
 	}
 
 	while (bufLen == 1024)
@@ -49,14 +49,14 @@ int main(int ac, char **av)
 
 		if (bufLen == -1)
 		{
-			display(src, 'R');
+			display(src, 'R', av[1]);
 		}
 
 		chwr = write(dest, buf, bufLen);
 
 		if (chwr == -1)
 		{
-			display(dest, 'W');
+			display(dest, 'W', av[2]);
 		}
 	}
 
@@ -65,7 +65,7 @@ int main(int ac, char **av)
 
 	if (src || dest)
 	{
-		display(src, 'C');
+		display(src, 'C', NULL);
 	}
 
 	return (0);
@@ -75,10 +75,12 @@ int main(int ac, char **av)
  * display - displays an error message depending on file mode
  * @fd: The file descriptor
  * @mode: The file mode denoted by its inital
+ * @filename: The file name to read from or write to
+ *
  * Return: void
  */
 
-void display(int fd, char mode)
+void display(int fd, char mode, char *filename)
 {
 	if (mode == 'R')
 	{
@@ -87,7 +89,7 @@ void display(int fd, char mode)
 	}
 	else if (mode == 'W')
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 		exit(99);
 	}
 	else
