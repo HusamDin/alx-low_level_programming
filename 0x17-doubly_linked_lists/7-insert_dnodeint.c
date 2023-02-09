@@ -38,6 +38,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		index++;
 	}
 
+	if (bef_new_node == NULL)
+		return (NULL);
+
 	aft_new_node = bef_new_node->next;
 
 	new_node->next = aft_new_node;
