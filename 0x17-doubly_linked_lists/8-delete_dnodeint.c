@@ -6,7 +6,7 @@
  * @head: A pointer to the head node pointer
  * @index: The index of the node that should be deleted
  *
- * Returns: 1 if it succeeded, -1 if it failed
+ * Return: 1 if it succeeded, -1 if it failed
  */
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
@@ -26,11 +26,14 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (1);
 	}
 
-	while (idx < index)
+	while (idx < index && temp != NULL)
 	{
 		temp = temp->next;
 		idx++;
 	}
+
+	if (temp == NULL)
+		return (-1);
 
 	bef_temp = temp->prev;
 	aft_temp = temp->next;
