@@ -17,6 +17,7 @@ def island_perimeter(grid):
     """
 
     perimeter = 0
+    conn = 0
 
     for row in range(len(grid)):
         for value in range(len(grid[row])):
@@ -26,8 +27,8 @@ def island_perimeter(grid):
             if grid[row][value] == 1:
                 perimeter += 4
                 if grid[row - 1][value] == 1:
-                    perimeter -= 2
+                    conn += 1
                 if grid[row][value - 1] == 1:
-                    perimeter -= 2
+                    conn += 1
 
-    return (perimeter)
+    return (perimeter - conn * 2)
