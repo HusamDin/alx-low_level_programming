@@ -22,9 +22,9 @@ def island_perimeter(grid):
         for value in range(len(grid[row])):
             if grid[row][value] == 1:
                 perimeter += 4
-                if grid[row - 1][value] == 1:
+                if grid[row - 1][value] == 1 and row != 0:
                     perimeter -= 2
-                if grid[row][value - 1] == 1:
+                if grid[row][value - 1] == 1 and value != 0:
                     perimeter -= 2
 
     return (perimeter)
