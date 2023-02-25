@@ -30,4 +30,4 @@ def island_perimeter(grid):
                 if grid[row][value - 1] == 1:
                     perimeter -= 2
 
-    return (perimeter - conn * 2)
+    return (perimeter)
